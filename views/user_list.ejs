@@ -2,20 +2,25 @@
 <%- include('_head') -%>
 <%- include('_header') -%>
 <body>
-<h1>Users</h1>
-<ol>
-    <% results.forEach(function(user) {%>
-        <li>
-            <%= user.name %> 
-        </li>
-    <% }); %>
-</ol>
-<%if (next) { %>
-    <a href="<%= next %>">Next</a>
-<% } %>
-<%if (previous) { %>
-    <a href="<%= previous %>">Previous</a>
-<% } %>
+    <header>
+        <h1>Users</h1>
+    </header>
+    <main>
+        <% results.forEach(function(user) {%>
+            <article>
+                <%= user.name %> 
+            </article>
+        <% }); %>
+
+    </main>
+    <footer>
+        <%if (next) { %>
+            <a href="<%= next %>">Next</a>
+        <% } %>
+        <%if (previous) { %>
+            <a href="<%= previous %>">Previous</a>
+        <% } %>
+    </footer>
 </body>
 <%- include('_footer') -%>
 </html>
