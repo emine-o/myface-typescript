@@ -6,11 +6,13 @@
         <h1>Posts</h1>
     </header>  
     <main>
-    <% postList.results.forEach(function(post) {%>
-        <article>
-            <%= post.message %> - <time><%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss") %></time>
-        </article>
-    <% }); %>
+        <ol>
+        <% postList.results.forEach(function(post) {%>
+            <li>
+                <%= post.message %> - <time datetime="YYYY-MM-DD HH:MM:SS"><%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss") %></time>
+            </li>
+        <% }); %>
+        </ol>
     </main>
     <footer>
         <%if (postList.next) { %>

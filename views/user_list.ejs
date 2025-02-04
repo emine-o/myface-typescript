@@ -6,12 +6,13 @@
         <h1>Users</h1>
     </header>
     <main>
+        <ol>
         <% results.forEach(function(user) {%>
-            <article>
+            <li>
                 <%= user.name %> 
-            </article>
+            </li>
         <% }); %>
-
+        </ol>
     </main>
     <footer>
         <%if (next) { %>
