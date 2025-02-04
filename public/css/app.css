@@ -1,1 +1,23 @@
 /* Add your styles here. */
+body {
+    background-color:#f0ece2;
+}
+
+@media only screen and (max-width:320px){
+
+    .myFaceHeader{
+        background-color:#596e79;
+        height:15%;
+        width:100%;
+    }
+    
+    header .myFaceTitle{
+        text-align: center;
+    }
+    
+    .navLinks{
+        font-size: xx-large;
+    }
+
+}
+
