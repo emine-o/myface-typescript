@@ -2,20 +2,26 @@
 <%- include('_head') -%>
 <%- include('_header') -%>
 <body>
-    <header>
-        <h1>Posts</h1>
-    </header>
-    <section>
+    
+   <!-- <section>
         <a href="/posts/create">Create Post</a>
-    </section>  
-    <main>
-        <ol>
-        <% postList.results.forEach(function(post) {%>
-            <li>
-                <%= post.message %> - <time datetime="YYYY-MM-DD HH:MM:SS"><%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss") %></time>
-            </li>
-        <% }); %>
-        </ol>
+    </section>  -->
+    <section class ="postHeader">
+       
+    </section>
+    <main >
+        <label>Posts</label>
+        <div class="postHeaderImg"></div>
+        <div class="postItems">
+           
+            <% postList.results.forEach(function(post) {%>
+               <div class="posts">
+                    <div class="postImg"></div>
+                    <%= post.message %> - <time datetime="YYYY-MM-DD HH:MM:SS"><%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss") %></time>
+               </div>
+            <% }); %>
+            
+        </div>    
     </main>
     <footer>
         <%if (postList.next) { %>
