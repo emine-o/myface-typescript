@@ -14,19 +14,22 @@
         <img class="personImg" src="../images/person_image.png" />
     </section>
     <main >
-        <label>Posts</label>
+        <!--<label>Posts</label>-->
         <div class=""></div>
         <div class="postItems">
            
-            <% postList.results.forEach(function(post) {%>
-                <div class="posts">
+            <% postList.results.forEach(function(post,index) {%>
+                <div class="posts" id=<%=index%>>
                      <div class="postImg">
                          <img class= "postImage" src=<%=post.imageUrl %> />
                      </div>
-                     <div > 
+                     <div> 
                          <time datetime="YYYY-MM-DD HH:MM:SS"><%= format(post.createdAt, "dd/MM/yyyy") %></time>
                         <div class="postMessage"> <%= post.message %></div> 
-                     </div>
+                        <div class="colorButton" >
+                            <button type="button" onclick="changeColour(<%=index%>)">Change Colour!</button>
+                        </div>
+                    </div>
                  </div>
              <% }); %>
              

@@ -135,6 +135,23 @@ body {
         width:100%;
         height:200px;
     }
+
+    .colorButton button{
+        height: 30px;
+        width: 18%;
+        margin-bottom: 0px;
+        margin-top: 7px;
+        position: absolute;
+        background-color: #252A38;
+        color:#DCDCDC;
+        border-radius: 5px;
+        transition-duration: 0.4s;
+    }
+
+    .colorButton button:hover {
+        background-color: #DCDCDC;
+        color: #151820;
+      }
     
     /*.postMessage{
         overflow-y:scroll;
