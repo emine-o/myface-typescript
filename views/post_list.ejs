@@ -2,21 +2,42 @@
 <%- include('_head') -%>
 <%- include('_header') -%>
 <body>
-    <header>
-        <h1>Posts</h1>
-    </header>  
-    <main>
-        <ol>
-        <% postList.results.forEach(function(post) {%>
-            <li>
-                <%= post.message %> - <time datetime="YYYY-MM-DD HH:MM:SS"><%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss") %></time>
-            </li>
-        <% }); %>
-        </ol>
+    
+   <!-- <section>
+        <a href="/posts/create">Create Post</a>
+    </section>  -->
+    <section class ="postHeader">
+       <img  class="postHeaderImg"src="../images/landscape.jpg" />
+        <div class="nameLine">
+            <p class="nameSurname">Name Surname</p>
+        </div>
+        <img class="personImg" src="../images/person_image.png" />
+    </section>
+    <main >
+        <!--<label>Posts</label>-->
+        <div class=""></div>
+        <div class="postItems">
+           
+            <% postList.results.forEach(function(post,index) {%>
+                <div class="posts" id=<%=index%>>
+                     <div class="postImg">
+                         <img class= "postImage" src=<%=post.imageUrl %> />
+                     </div>
+                     <div> 
+                         <time datetime="YYYY-MM-DD HH:MM:SS"><%= format(post.createdAt, "dd/MM/yyyy") %></time>
+                        <div class="postMessage"> <%= post.message %></div> 
+                        <div class="colorButton" >
+                            <button type="button" onclick="changeColour(<%=index%>)">Change Colour!</button>
+                        </div>
+                    </div>
+                 </div>
+             <% }); %>
+             
+        </div>    
     </main>
-    <footer>
+    <footer class="postFooter">
         <%if (postList.next) { %>
-            <a href="<%= postList.next %>">Next</a>
+           <button><a href="<%= postList.next %>">Load more</a></button> 
         <% } %>
         <%if (postList.previous) { %>
             <a href="<%= postList.previous %>">Previous</a>
