@@ -2,9 +2,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // Add your JavaScript here.
   
 });
-function toggleMenu(x) {
+function displayMobileMenu(obj) {
   console.log('inside toggle');
-  x.classList.toggle("change");
+  let menuId=document.getElementById('mobileMenu');
+ menuId.style.display ='block';
+ menuId.classList.add("change");
 }
 
 function changeColour(elem) {

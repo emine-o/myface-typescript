@@ -23,18 +23,25 @@ body {
     /* smaller size display 
     @media only screen and (max-width:320px){*/
         .menu_container{
-            display: inline-block;
+           /*display: inline-block;*/
             cursor: pointer;
-            height:160px;
-            width:250px;
+            height:60px;
+            width:50px;
+        }
+        .mobileMenu{
+            display:none;
+        }
+        .menuOpt{
+            display:flex;
+            flex-direction:column;
         }
         
-        .menu_bar1 .menu_bar2 .menu_bar3{
+        .menu_bar1, .menu_bar2, .menu_bar3{
             width: 35px;
-            height: 135px;
-            background-color:cadetblue;
+            height: 5px;
             margin: 6px 0;
             transition: 0.4s;
+            background-color: black;
             border:1px solid black;
         }
     
