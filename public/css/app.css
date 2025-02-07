@@ -22,18 +22,46 @@ body {
 
     /* smaller size display 
     @media only screen and (max-width:320px){*/
+    .menuBar{
+        height:500px;
+        width:200px;
+        margin-left:auto;
+        margin-right:0px;
+    }
         .menu_container{
            /*display: inline-block;*/
             cursor: pointer;
             height:60px;
             width:50px;
+            margin-left: auto;
+            margin-right: 8px;
+           
         }
         .mobileMenu{
             display:none;
+            background-color: #252A38;
+            width: 200px;
+            height: 400px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+        }
+        .menuItem  > a{
+            text-decoration: none;
+            color: #DCDCDC;
+        }
+        .menuItem{
+            padding: 20px 10px;
+
+        }
+
+        #myFaceTitle{
+            font-size: 32px;
         }
         .menuOpt{
             display:flex;
             flex-direction:column;
+            margin-left: 20px;
+
         }
         
         .menu_bar1, .menu_bar2, .menu_bar3{
@@ -41,8 +69,7 @@ body {
             height: 5px;
             margin: 6px 0;
             transition: 0.4s;
-            background-color: black;
-            border:1px solid black;
+            background-color: #151820;
         }
     
         .change .menu_bar1 {

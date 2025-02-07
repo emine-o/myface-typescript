@@ -1,20 +1,23 @@
 <html lang="en-gb">
 <%- include('_head') -%>
 <body>
-    <div class="menu_container" onclick="displayMobileMenu(this);">
-        <div class="menu_bar1"></div>
-        <div class="menu_bar2"></div>
-        <div class="menu_bar3"></div>
-    </div>
-    <nav class="mobileMenu" id="mobileMenu">
-        <div class="menuOpt">
-            <div class=""><label > MyFace</label></div>
-            <div class=""><a href="/home">Home</a></div>    
-            <div class=""><a href="/posts">Posts</a></div>  
-            <div class=""><a href="/users">Users</a></div>  
-            <div class=""><a href="/posts/create">+ New Post</a></div>
+    <div class="menuBar">
+        <div class="menu_container" onclick="displayMobileMenu(this);">
+            <div class="menu_bar1"></div>
+            <div class="menu_bar2"></div>
+            <div class="menu_bar3"></div>
         </div>
-    </nav>
+        <nav class="mobileMenu" id="mobileMenu">
+            <div class="menuOpt">
+                <div class="menuItem"><label id="myFaceTitle"> MyFace</label></div>
+                <div class="menuItem"><a href="/home">Home</a></div>    
+                <div class="menuItem"><a href="/posts">Posts</a></div>  
+                <div class="menuItem"><a href="/users">Users</a></div>  
+                <div class="menuItem"><a href="/posts/create">+ New Post</a></div>
+            </div>    
+        </nav>
+    </div>    
+    
 </body>
 <%- include('_footer') -%>
 </html>
